@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff9fcb">
+<title>Для Веры 🌸💖✨</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ ФОНОВЫЕ СЛОИ ============ -->
+<div class="bg-layer bg-gradient"></div>
+<div class="bg-layer bg-pattern"></div>
+<div class="bg-layer bg-glow-1"></div>
+<div class="bg-layer bg-glow-2"></div>
+<div class="bg-layer bg-glow-3"></div>
+
+<!-- ============ ЛЕТАЮЩИЕ ЛЕПЕСТКИ И БЛЁСТКИ ============ -->
+<div class="petals" id="petals"></div>
+<div class="sparkles" id="sparkles"></div>
+<div class="bubbles" id="bubbles"></div>
+
+<!-- ============ ГИРЛЯНДА СВЕРХУ ============ -->
+<div class="garland">
+    <span>🌸</span><span>💖</span><span>✨</span><span>💕</span><span>🌸</span>
+    <span>💝</span><span>✨</span><span>💖</span><span>🌸</span><span>💕</span>
+    <span>✨</span><span>💝</span><span>🌸</span><span>💖</span><span>✨</span>
+    <span>💕</span><span>🌸</span><span>💝</span><span>✨</span><span>💖</span>
+</div>
+
+<!-- ============ КНОПКИ ПО УГЛАМ ============ -->
+<div class="top-left-btn">
+    <button class="neon-btn" onclick="showMessage('Ты самая красивая 💘')">
+        <span class="btn-text">Ты самая красивая 💘</span>
+        <span class="btn-shine"></span>
+    </button>
+    <div class="click-hint">⬆ Нажми</div>
+</div>
+
+<div class="top-right-btn">
+    <button class="neon-btn" onclick="showMessage('Ты самая лучшая 💝')">
+        <span class="btn-text">Ты самая лучшая 💝</span>
+        <span class="btn-shine"></span>
+    </button>
+    <div class="click-hint">⬆ Нажми</div>
+</div>
+
+<!-- ============ ВСПЛЫВАЮЩЕЕ СООБЩЕНИЕ ============ -->
+<div class="popup-overlay" id="popupOverlay"></div>
+<div class="popup-message" id="popupMessage">
+    <div class="popup-inner" id="popupInner"></div>
+</div>
+
+<!-- ============ ОСНОВНОЙ КОНТЕНТ ============ -->
+<div class="container">
+
+    <!-- ===== СТРАНИЦА 1 ===== -->
+    <div class="card active" id="page1">
+        <div class="card-decoration top-left">🌸</div>
+        <div class="card-decoration top-right">💖</div>
+        <div class="card-decoration bottom-left">✨</div>
+        <div class="card-decoration bottom-right">💕</div>
+
+        <div class="photo-wrap">
+            <div class="photo-ring"></div>
+            <img src="https://i.ibb.co/gbdbFdFn/IMG-20260927-121127-932.jpg" alt="Вера" class="vera-photo">
+            <div class="photo-sparkle s1">✨</div>
+            <div class="photo-sparkle s2">💖</div>
+            <div class="photo-sparkle s3">🌸</div>
+        </div>
+
+        <h1 class="title-shine">Для Веры 🌸</h1>
+        <p class="subtitle">самой нежной и любимой</p>
+
+        <div class="heart-anim">💖</div>
+
+        <p class="message">
+            Вера, ты моё самое тёплое чувство.<br>
+            Каждый день с тобой как первый рассвет,<br>
+            каждый взгляд это новая причина улыбаться.
+        </p>
+
+        <div class="roses-row">
+            <span class="float-1">🌸</span><span class="float-2">💖</span><span class="float-3">🌸</span>
+        </div>
+
+        <p class="signature">С любовью я пишу тебе это 💕</p>
+
+        <button class="btn" onclick="nextPage(2)">
+            <span>Дальше</span>
+            <span class="arrow">→</span>
+        </button>
+
+        <div class="page-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- ===== СТРАНИЦА 2 ===== -->
+    <div class="card" id="page2">
+        <div class="card-decoration top-left">✨</div>
+        <div class="card-decoration top-right">💝</div>
+        <div class="card-decoration bottom-left">🌷</div>
+        <div class="card-decoration bottom-right">💕</div>
+
+        <h1 class="title-shine">Ты чудо ✨</h1>
+
+        <div class="heart-anim">🌸</div>
+
+        <p class="message">
+            Твои глаза как звёзды,<br>
+            твоя улыбка как солнце,<br>
+            твой голос моя любимая песня.
+        </p>
+
+        <p class="message">
+            Ты красива не только снаружи,<br>
+            но и глубоко внутри:<br>
+            в каждом слове, в каждом поступке.
+        </p>
+
+        <div class="roses-row">
+            <span class="float-1">🌷</span><span class="float-2">💐</span><span class="float-3">🌷</span>
+        </div>
+
+        <button class="btn" onclick="nextPage(3)">
+            <span>Дальше</span>
+            <span class="arrow">→</span>
+        </button>
+
+        <div class="page-dots">
+            <span class="dot"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- ===== СТРАНИЦА 3 ===== -->
+    <div class="card" id="page3">
+        <div class="card-decoration top-left">💖</div>
+        <div class="card-decoration top-right">🌸</div>
+        <div class="card-decoration bottom-left">💕</div>
+        <div class="card-decoration bottom-right">✨</div>
+
+        <h1 class="title-shine">Моё счастье 💗</h1>
+
+        <div class="heart-anim">💗</div>
+
+        <p class="message">
+            С тобой я становлюсь лучше.<br>
+            С тобой каждый день особенный.<br>
+            С тобой хочется жить, мечтать и любить.
+        </p>
+
+        <p class="message">
+            Спасибо, что ты рядом.<br>
+            Спасибо за каждое утро,<br>
+            за каждую улыбку, за тепло твоих рук.
+        </p>
+
+        <div class="roses-row">
+            <span class="float-1">🌸</span><span class="float-2">💖</span><span class="float-3">🌸</span>
+        </div>
+
+        <button class="btn" onclick="nextPage(4)">
+            <span>Дальше</span>
+            <span class="arrow">→</span>
+        </button>
+
+        <div class="page-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- ===== СТРАНИЦА 4 ===== -->
+    <div class="card final" id="page4">
+        <div class="card-decoration top-left">💝</div>
+        <div class="card-decoration top-right">🌷</div>
+        <div class="card-decoration bottom-left">✨</div>
+        <div class="card-decoration bottom-right">💖</div>
+
+        <h1 class="title-shine">Я люблю тебя 💖</h1>
+
+        <div class="heart-anim heart-big">❤️</div>
+
+        <p class="message big">
+            Вера, ты самое главное,<br>
+            что у меня есть.
+        </p>
+
+        <p class="message">
+            Я очень сильно тебя люблю.<br>
+            Ты моя нежность,<br>
+            моё счастье, моя вселенная.
+        </p>
+
+        <div class="roses-row">
+            <span class="float-1">🌸</span><span class="float-2">💕</span><span class="float-3">🌸</span>
+        </div>
+
+        <p class="signature big">От Славы 💌</p>
+
+        <button class="btn back" onclick="nextPage(1)">
+            <span class="arrow">↺</span>
+            <span>Назад</span>
+        </button>
+
+        <div class="page-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot active"></span>
+        </div>
+    </div>
+
+</div>
+
+<!-- ============ ПОДВАЛ ============ -->
+<footer class="site-footer">
+    <span>🌸 Сделано с любовью для Веры 🌸</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+          </html>
